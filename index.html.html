@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urns:schemas-microsoft-com:office:office" >
+<head>
+
+    <!--meta tag settings for HTML Emails and Email services-->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!--
+    Windows Outlook 2003 and above use Microsoft Word as a
+     rendering engine, which can lead to some weird rendering issues.
+      Outlook conditional comments allow us to add bits of HTML that 
+      are only read by the Word-based versions of Outlook.
+-->
+
+<!---[is mso]>
+    <noscript>
+     
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+<![endif]--->
+    <style type="text/css">
+
+        table {
+            border-style: 0;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .content {
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        .column {
+            border-spacing: 0;
+            vertical-align: top;
+            width: 100%;
+            display: inline-block;
+         }
+
+
+        
+
+        /*****Gmail adds the 'U' element ******/
+        u + .body .gmail-blend-screen {
+            background: #000;
+            mix-blend-mode: screen;
+        }
+
+        u + .body .gmail-blend-difference {
+            background: #000;
+            mix-blend-mode: difference; 
+        }
+
+        .externalclass {
+            width: 100%;
+        }
+
+        .externalclass, .externalclass p, .externalclass span, 
+        .externalclass font, .externalclass td, .externalclass div  {
+            line-height: 100%;
+        }
+
+        a[x-apple-data-detectors=true] {
+            color: inherit !important;
+            text-decoration: inherit !important;
+        }
+
+        @media screen and (max-width: 600px) {
+            .background-text {
+                background-color: #ff0000 !important;
+            }
+            .font-size-text {
+                font-size: 40px !important;
+            }
+
+            .column {
+                padding-bottom: 25px;
+            }
+            
+        }
+
+        @media screen and (max-width: 400px) {
+            .column {
+                padding-bottom: 25px;
+            }
+            
+        }
+
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+
+        /* what this means is if the users setting is dark based on the color scheme checking
+        then apply the following style  */
+
+        @media (prefers-color-scheme: dark) {
+           
+            body, table {
+                background: #2d2d2d !important;
+                color: white !important;
+            }
+
+            .darkmode-transparent {
+                background-color: transparent !important;
+            }
+            
+
+            /**Used to target the application version of Outlook.
+             While it may look like a minute market share, simply 
+             copy the @media (prefers-color-scheme: dark) styles
+              you already used and add the proper [data-ogsc] 
+              and/or [data-ogsb] prefixes to each CSS rule.**/
+
+
+              /***
+             h1 {
+                background: #ff0000 !important;
+            }
+            ***/
+
+            /**
+            [data-ogsc] h2 {
+                background: #00ff00 !important;
+                color: #0000ff !important;
+
+            }
+
+            [data-ogsc] h3 {
+                background: #00ff00 !important;
+                color: #0000ff !important;
+            }
+            **/
+
+            [data-ogsc] body, table {
+                background: #2d2d2d !important;
+                color: #ffffff !important;
+            }
+        }
+
+    </style>
+
+
+    <!--[if mso]>
+        <style type="text/css">
+            body {
+                background-color: ##F8F9F9 !important;
+                color: black !important;
+            }
+            body, table, td, p, a { font-family: Arial, Helvetica, Roboto, sans-serif !important;}
+            table { border-spacing: 0 !important; border-collapse: collapse !important;
+            line-height: 100% !important; mso-line-height-rule: exactly !important; }
+        </style>
+    <![endif]-->
+
+    <title> Receipt HTML Email </title>
+</head>
+<body class="body" xml:lang="en" style="margin: 0;  padding: 0; min-width: 100%;
+    background-color: #F8F9F9; color: black;">
+
+    <div style="width: 100%; table-layout: fixed; background-color: #dde0e1; color: #3e3e3e; 
+    font-family:Arial, Helvetica, Roboto, sans-serif; font-size: 16px; margin: 0 auto 40px;">
+        <div style="max-width: 600px; background-color:white; color: #3d3d3d; 
+        font-family:Arial, Helvetica, Roboto,  sans-serif; font-size: 16px; box-shadow: 0 0 10px rgba(0,0,0, .2);
+        margin: 0 auto;">
+
+        <div style="font-size: 0; color: #fafdfe; mso-line-height-rule: exactly; line-height: 0px;
+        display: none; max-width: 0; max-height: 0; opacity: 0; overflow: hidden; mso-hide: all;">
+            This is our preheader text which can be 35 to 190 characters, but 85 to 100 is recommended.
+        </div>
+
+        <!----Emails really only need to use three tags which are, table, tr and td. 
+        Dont use other table tags as some email services cant read them-->
+
+
+    <!--[if mso]>
+            <table width="600" align="center" style="border-spacing: 0; border-collapse: collapse;
+        color: #3d3d3d;" role="presentation">
+            <tr>
+            <td>
+    <![ednif]-->
+
+
+
+
+        <table align="center" style="border-spacing: 0; border-collapse: collapse; color: black; 
+        font-family: Arial, Helvetica, Roboto, sans-serif; font-size: 16px; background-color: white; 
+        margin: 0; width: 100%; max-width: 600px;" role="presentation">
+
+        <!----Broder Line-->
+
+        <!--[if mso]>
+                <tr>
+                    <td height="2px"  style=" background: linear-gradient(black, black); background-color: black; "> 
+                        <div style="font-size: 0; mso-line-height-rule: exactly; line-height: 0;
+                        display: none; mso-hide: all;">
+                        &zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;
+                        </div>
+                    </td>
+                </tr>
+        <![endif]-->
+
+        <tr>
+            <td style="padding: 3px; background: linear-gradient(black, black); background-color: black; 
+            mso-hide: all;">
+
+            </td>
+        </tr>
+
+            
+        <!---TOP LOGO START-->
+        <tr>
+            <td style="padding: 0;">
+                <table width="100%" style="border-spacing: 0; " role="presentation">
+                    <tr>
+                        <td style="padding: 5px;">
+
+                            <table align="left" style="border-spacing: o;" role="presentation">
+                                <tr>
+                                    <td>
+                                        <a href="https://www.google.com/" target="_blank" style="text-decoration: none; text-align: center;" >
+                                            <img src="https://i.ibb.co/80SL5Sn/Square-pay-logo.png"  width="40" style="border: 0; max-width: 40px;" alt="LOGO">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table align="right" width="50%" style="border-spacing: o;  width: 50%;" 
+                            role="presentation">
+                                <tr>
+                                    <td style="padding: 8px;  text-align: right; margin: 0;">
+                                        <h1 style="color: #AEB6BF; margin: 0;">Receipt</h1>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!---TOP LOGO END-->
+
+        <!--Receipt Details Start-->
+        <tr>
+            <td style="padding: 0;">
+                <table width="100%" style="border-spacing: 0; background-color: white;" role="presentation">
+                    <tr>
+                        <td class="column-wrapper" style="padding: 7px; ">
+
+                            <!--[if mso]>
+                                <table width="100%" style="border-spacing: 0; " role="presentation">
+                                    <tr>
+                                        <td width="275" valign="middle" padding: 0;>
+                            <![end if]-->
+
+
+                            <table  class="column column-one-half" width="100%" style="border-spacing: 0;
+                            width: 100%; max-width: 275px; vertical-align: middle; display: inline-block;">
+                                <tr>
+                                    <td style="padding: 0 0 25px 0; margin:0;">
+                                        <p style="margin:0; font-weight: bold; font-size: 14px">Email:</p>
+                                        <p style="margin:0; color: #909497;">
+                                            <a href="" style="text-decoration: none; color: #fff; color: #909497;" >
+                                                andymartincontact&#8203;@gmail.com
+                                            </a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 25px 0; margin:0;">
+                                        <p style="margin:0; font-weight: bold; font-size: 14px">Date:</p>
+                                        <p style="margin:0; color: #797D7F;">April, 25, 2023</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0; margin:0;">
+                                        <p style="margin:0; font-weight: bold; font-size: 14px">Order#</p>
+                                        <p style="margin:0; color: #797D7F;">DDF7778987</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--[if mso]>
+                            </td> 
+                            <td width="275" valign="middle" padding: 0;>
+                            <![end if]-->
+
+                            <table  class="column column-one-half" width="100%" style="border-spacing: 0;
+                            width: 100%; max-width: 275px; vertical-align: middle; display: inline-block; ">
+                                <tr>
+                                    <td style="padding: 0 0 25px 0; margin:0;">
+                                        <p style="margin:0; font-weight: bold; font-size: 14px">Bill To:</p>
+                                        <p style="margin:0; color: #797D7F;">VISA...4577</p>
+                                        <p style="margin:0; color: #797D7F;">Andy Martinez</p>
+                                        <p style="margin:0; color: #797D7F;">1250 Hogwarts Ave Apt# 77</p>
+                                        <p style="margin:0; color: #797D7F;">Lindelwold, NJ, 08023</p>
+                                        <p style="margin:0; color: #797D7F;">USA</p>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <!--[if mso]>
+                                    </td>
+                                </tr>
+                            </table>
+                            <![end if]-->
+
+                           
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+            <!--Receipt Details End-->
+
+    <!--Product Total Start-->
+    <tr>
+        <td style="padding: 0;">
+            <table width="100%" style="border-spacing: 0;  background-color: #D5D8DC;" role="presentation">
+                <tr>
+                    <td class="column-wrapper" style="padding: 0;">
+
+                        <!--[if mso]>
+                        <table width="100%" style="border-spacing: 0; " role="presentation">
+                            <tr>
+                                <td width="275" valign="middle" padding: 0;>
+                        <![endif]-->
+
+                        <table class="column column-one-half" width="100%" style="border-spacing: 0;
+                        width: 100%; max-width: 275px; vertical-align: middle; display: inline-block;">
+                            <tr>
+                                <td style="padding: 25px;">
+                                    <a href="https://www.google.com/" target="_blank">
+                                        <img src="https://i.ibb.co/kgvh9BK/megafood-men-40.png" alt="product" style="border:0;" width="75">
+                                    </a>
+                                    <h4 style=" margin:0; font-size: 14px;">Megafood Men's Vitamin</h4>
+                                    <p style="margin: 0; text-align: left; width:45%;">Price: $35</p> 
+                                </td>
+                            </tr>
+                        </table>
+                        <!--[if mso]>
+                        </td> <td width="275" valign="middle" padding: 0;>
+                        <![endif]-->
+                        <table class="column column-one-half" width="100%" style="border-spacing: 0;
+                        width: 100%; max-width: 275px; vertical-align: middle; display: inline-block;">
+                            <tr>
+                                <td style="padding: 25px;">
+                                    <p style="margin:0; font-weight: bold; font-size: 14px">Sub Total</p>
+                                    <p style="font-size: 20px; margin: 0; padding: 0 0 7px 0; color:#797D7F;">$35</p> 
+                                    <p style="margin:0; font-weight: bold; font-size: 14px">Sales tax (6.65%)</p>
+                                    <p style="font-size: 20px; margin: 0; color: #797D7F;">2.32</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--[if mso]>
+                                </td>
+                            </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <!--Product Total End-->
+
+    <!---Total Price Start-->
+    <tr>
+        <td style="padding: 15px;">
+            <table  width="100%" style="border-spacing: 0; width:100%;  " role="presentation">
+                <tr>
+                    <td class="column-wrapper" width="100%" style="padding: 0; display: inline-block; width: 100%;">
+
+                        <!--[if mso]>
+                        <table width="100%" style="border-spacing: 0; " role="presentation">
+                            <tr>
+                                <td width="275" valign="middle" padding: 0;>
+                        <![endif]-->
+                        <table class="column column-one-half" width="100%" style="border-spacing: 0; 
+                        width: 100%; max-width: 275px; display: inline-block; vertical-align: middle;
+                        border-right: 1px solid lightgrey; text-align: left;">
+                            <tr>
+                                <td>
+                                    <h2>Total</h2>
+                                </td>
+                            </tr>
+                        </table>
+
+                         <!--[if mso]>
+                         </td><td width="275" valign="middle" padding: 0; style="text-align: left">
+                        <![endif]-->
+
+                        <table class="column column-one-half" width="100%" style="border-spacing: 0; 
+                        width: 100%; max-width: 275px; display: inline-block; vertical-align: middle;text-align: left;">
+                            <tr>
+                                <td>
+                                    <h2 style="color: #797D7F;">$37.32</h2>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!--[if mso]>
+                                </td>
+                            </tr>
+                        </table>
+                        <![endif]-->
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!---Total Price End-->
+
+
+
+    <!----Store Logo, Store Name and Business Info Start -->
+    <tr>
+        <td style="padding: 15px;">
+            <table  width="100%" style="border-spacing: 0; width:100%;  " role="presentation">
+                <tr>
+                    <td style="padding: 0 0 15px 0; text-align: center; ">
+                        <a href="https://i.ibb.co/3Rxbcqt/Logo-and-Name.png" target="_blank">
+                            <img src="https://i.ibb.co/3Rxbcqt/Logo-and-Name.png" alt="logo name" width="300" style="border: 0; margin: 0 0 16px 0;">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <p style="font-weight:bold; color:#797D7F; margin: 0 0 16px 0;">1745 Cheesy Knock Rd, Lindelwold, NJ, 08020</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <p style="font-weight:bold; color:#797D7F; margin: 0 0 16px 0;"> jersey&#8203;nutrient&#8203;c&#8203;&#8203;.&#8203;&#8203;&#8203;com</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <p style="font-weight:bold; color:#797D7F; margin: 0 0 16px 0;">875-&#8203;776-&#8203;6631</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" style="padding: 10px 0 20px 0;  text-align: center;">
+
+
+                        <!--[if mso]>
+                            <v:roundrect 
+                            xmlns_v="urn:schemas-microsoft-com:vml"
+                            xmlns_w="urn:schemas-microsoft-com:office:word" href="https://google.com/" style="height: 25.5pt; width: 100.3pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#fff" fillcolor="#5DADE2">
+                            <w:anchorlock/>
+                            <center style="color: #fff; font-family: Arial, Helvetica, Roboto, sans-serif; font-size: 14px; font-weight: 600;">Shop Online</center>
+                            </v:roundrect>
+                        <![endif]-->
+
+                        <a href="https://google.com/" style="font-weight:bold; color:#fff; margin: 0 0 18px 0; background-color: #5DADE2;
+                        padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block; mso-hide:all; ">
+                            Continue Shopping
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <p style="font-weight:bold; color:#797D7F; margin: 0 0 16px 0; border-bottom: 1px solid #797D7F">Follow Us</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="darkmode-bg" style="background-color: #ebf5fa; text-align: center;
+                    padding: 10px 0 8px 0;">
+
+                       <a href="https://www.twitter.com/"  target="_blank" style="padding: 5px; margin:0;">
+                          <img src="https://i.ibb.co/GJD2KSh/twitter.png" alt="twitter" width="32"
+                          style="border: 0; padding: 5px;">
+                       </a>
+
+                       <a href="https://www.youtube.com/"  target="_blank" style="padding: 5px; margin:0;">
+                          <img src="https://i.ibb.co/LNFQnqd/youtube.png" alt="youtube" width="32"
+                          style="border: 0; padding: 5px;">
+                       </a>
+
+                       <a href="https://www.instagram.com/"  target="_blank" style="padding: 5px; margin:0;">
+                          <img src="https://i.ibb.co/Jsm9hyt/instagram.png" alt="instagram" width="32"
+                          style="border: 0; padding: 5px;">
+                       </a>
+
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td style="padding: 25px 0 0 0;">
+                        <p style=" font-size: 14px; font-weight:bold; color:#797D7F; margin: 0;">Return Policy: We stand behind everything we sell. If you arent satisfied with your purchase, you can return it for a replacement or full refund. 
+                        </p>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td style="padding: 25px 0 0 0;">
+                        <p style=" font-size: 14px; font-weight: 500; color:#797D7F; margin: 0;">Your Security and Privacy
+                            Square does not share your email address with the merchant. When you provide feedback, you can allow the merchant to respond directly to your feedback through emails from Square.
+                            
+                            Note: To change your receipt preferences for a merchant, click the “Manage preferences” link found at the bottom of your receipt.
+                            
+                        </p>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td style="padding: 25px 0 0 0;">
+                        <p style=" font-size: 14px; font-weight: 500; color:#797D7F; margin: 0;">
+                            Report a Problem with a Merchant The purpose of Square Feedback is to give merchants and customers the opportunity to exchange feedback and replies on customer experiences. If you receive abusive, harassing, excessive or objectionable messages, please contact us for assistance. You may not use Square Feedback to dispute a charge, request a refund, or send messages unrelated to your visit. 
+                            If you would like to dispute a charge, please file a dispute with your card issuing bank and let us know.
+
+                        </p>
+                    </td>
+                 </tr>
+
+
+            </table>
+        </td>
+    </tr>
+    <!----Store Logo, Store Name and Business Info End -->
+            
+        </table>
+
+
+    </td>
+    </tr>
+    </table>
+
+
+
+    
+    <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+    <![ednif]-->  
+
+<br>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
